@@ -7,7 +7,6 @@ import tempfile, os
 
 
 st.sidebar.success("Gramdev Tech💻")
-st.logo("E:\data\personal\logo.png", size="large")
 st.set_page_config(page_title="GramdevTech dashboard", layout="wide")
 
 
@@ -95,4 +94,5 @@ with st.spinner("🟢Fetching live data..."):
             
 st.success("Analysis complete ✅ ")
  
+
                
