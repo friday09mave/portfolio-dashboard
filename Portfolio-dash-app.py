@@ -69,7 +69,7 @@ with st.spinner("🟢Fetching live data..."):
              values=weights,
              color_discrete_sequence=px.colors.qualitative.Pastel,
              title="Portfolio Allocation")
-         st.plotly_chart(fig_pie, use_container_width=True)
+         st.plotly_chart(fig_pie, width="stretch")
 
          st.subheader("📚Monthly Returns")
          st.dataframe(portfolio_returns.monthly_returns().style.format("{:.2%}"))
@@ -96,4 +96,5 @@ st.success("Analysis complete ✅ ")
  
 
                
+
 
