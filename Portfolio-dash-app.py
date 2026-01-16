@@ -78,7 +78,7 @@ with st.spinner("🟢Fetching live data..."):
          st.line_chart((1+ portfolio_returns).cumprod())
 
          st.subheader("📊End of Year (EOY) Returns")
-         eoy_returns =portfolio_returns.resample("Y").apply(lambda x:(x+1).prod() -1)
+         eoy_returns =portfolio_returns.resample("YE").apply(lambda x:(x+1).prod() -1)
          st.bar_chart(eoy_returns)
 
          with tempfile.TemporaryDirectory() as tmpd:
@@ -96,3 +96,4 @@ st.success("Analysis complete ✅ ")
  
 
                
+
