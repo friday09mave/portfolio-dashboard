@@ -82,19 +82,20 @@ with st.spinner("🟢Fetching live data..."):
          st.bar_chart(eoy_returns)
 
          with tempfile.TemporaryDirectory() as tmpd:
-            report_path=os.path.join(tmpd, "portfolio_report.html")
-            qs.reports.html(portfolio_returns, output=report_path, title="Portfolio Report")
+            report_path=os.path.join(tmpd, "Gramdevtech Portfolio Report.html")
+            qs.reports.html(portfolio_returns, output=report_path, title="Gramdevtech Portfolio Report")
             with open(report_path, "r", encoding="utf-8") as f:
                 html_content=f.read()
             st.download_button(
                 label="⬇️Download Full Report🔓",
                 data= html_content,
-                file_name="portfolio_report.html",
+                file_name="Gramdevtech Portfolio Report.html",
                 mime="text/html")
             
 st.success("Analysis complete ✅ ")
  
 
                
+
 
 
